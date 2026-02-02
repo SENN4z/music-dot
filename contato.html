@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Entre em Contato</title>
+    <style>
+        /* Tipografia estilo Apple (San Francisco/System UI) */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            margin: 0;
+            /* Fundo escuro */
+            background-color: #121212; 
+            color: #E0E0E0;
+        }
+
+        /* Container Principal - centraliza o conteúdo */
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Estilo para o cabeçalho para centralizar o logo */
+        .header {
+            padding-bottom: 20px;
+            text-align: center; /* Centraliza o conteúdo inline/inline-block dentro do header */
+        }
+        
+        /* Estilo do Logo musicdot */
+        .logo {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        /* Ajuste para a imagem: Garante 175px de largura e cor visível no Dark Mode */
+        .logo img {
+            width: 175px; 
+            height: auto;
+            filter: invert(100%) hue-rotate(180deg) brightness(1.2); 
+        }
+
+        /* Estilo da Seção de Título "Entre em contato" */
+        .title-section {
+            background-color: #1F1F1F; 
+            padding: 10px 20px;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+            /* Cantos arredondados para a caixa do título */
+            border-radius: 8px; 
+        }
+
+        .title-section h1 {
+            font-size: 1.6em;
+            color: #F0F0F0;
+            margin: 0;
+            /* NOVO: Título em negrito */
+            font-weight: bold; /* ou 700 */
+        }
+
+        /* Estilo para cada grupo de campo */
+        .form-group {
+            margin-bottom: 10px; /* 10px de espaçamento entre campos */
+        }
+        
+        /* Estilo para inputs e textarea */
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            background-color: #1F1F1F; 
+            color: #E0E0E0; 
+            border: 1px solid #333; 
+            border-radius: 6px; 
+            box-sizing: border-box;
+            display: block;
+        }
+        
+        /* Placeholder (para os rótulos internos) */
+        ::placeholder {
+            color: #888; 
+            opacity: 1; 
+        }
+
+        /* Estilo para a caixa de Observação */
+        .form-group textarea {
+            height: 300px; /* 300px de altura */
+            resize: vertical;
+        }
+
+        /* Estilo do botão ENVIAR (Azul Apple com cantos arredondados) */
+        .form-group button {
+            background-color: #007AFF; /* Azul Apple */
+            color: white;
+            padding: 10px 20px; 
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+            font-weight: 500;
+            border-radius: 8px; 
+            transition: background-color 0.2s;
+        }
+
+        .form-group button:hover {
+            background-color: #005BB5; 
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <figure class="logo">
+                <img src="img/logo.svg" alt="musicdot logo">
+            </figure>
+        </header>
+
+        <div class="title-section">
+            <h1>Entre em contato</h1>
+        </div>
+
+        <form action="Mensagem.html" method="get">
+            
+            <div class="form-group">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="tel" id="fone" name="fone" placeholder="Fone (xx)xx-xx-xx-xx">
+            </div>
+
+            <div class="form-group">
+                <textarea id="observacao" name="observacao" placeholder="Deixe sua opinião" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
